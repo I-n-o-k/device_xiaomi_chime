@@ -11,6 +11,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from common CherishOS configuration
 $(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
+# Remove unwanted packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Target
 TARGET_BOOT_ANIMATION_RES := 1080
 
